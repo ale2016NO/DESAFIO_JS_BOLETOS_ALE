@@ -1,0 +1,200 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet">
+        
+        
+        <link rel="stylesheet" href="css/main.css">
+        
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+   
+
+        <header class="site-header">
+            <div class="hero">
+                <div class="contenido-header">
+                    <nav class="redes-sociales">
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </nav>
+                    <div class="informacion-evento">
+                        <div class="clearfix">
+                            <p class="fecha"><i class="fa fa-calendar" aria-hidden="true"></i> 1-10 Oct</p>
+                            <p class="ciudad"><i class="fa fa-map-marker" aria-hidden="true"></i> Buenos Aires, Arg</p>
+                        </div>
+
+                        <h1 class="nombre-sitio">CodoaCodo Web</h1>
+                        <p class="slogan">La mejor conferencia de <span>diseño web</span></p>
+                    </div> 
+
+                </div>
+            </div>
+        </header>
+
+        <body>
+            
+       
+        <div class="barra">
+            <div class="contenedor clearfix">
+                <div class="logo">
+                    <a href="index.php">
+                        <img src="img/logo.svg" alt="logo gdlwebcamp">
+                    </a>
+                </div>
+
+                <div class="menu-movil">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="navegacion-principal clearfix">
+                    <a href="conferencia.php">Conferencia</a>
+                    <a href="calendario.php">Calendario</a>
+                    <a href="invitados.php">Invitados</a>
+                    <a href="registro.php">Reservaciones</a>
+                </nav>
+            </div>
+        </div> 
+
+        <section class="seccion contenedor">
+            <h2>Registro de Usuarios</h2>
+            <form id="registro" class="registro" action="#" method="post">
+                <div id="datos_usuario" class="registro caja clearfix">
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre">
+                    </div>
+                    <div class="campo">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Tu Apellido">
+                    </div>
+                    <div class="campo">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Tu Email">
+                    </div>
+                    <div id="error"></div>
+                </div> 
+                
+                <div id="paquetes" class="paquetes">
+                  <h3>Elige el número de boletos</h3>
+                  <ul class="lista-precios clearfix">
+                      <li>
+                            <div class="tabla-precio">
+                                <h3>Pase por día (viernes)</h3>
+                                <p class="numero">$30</p>
+                                <ul>
+                                  <li>Bocadillos Gratis</li>
+                                  <li>Todas las conferencias</li>
+                                  <li>Todos los talleres</li>
+                                </ul>
+                                <div class="orden">
+                                    <label for="pase_dia">Boletos deseados:</label>
+                                    <input type="number" min="0" id="pase_dia" size="3" name="boletos[un_dia][cantidad]" placeholder="0">
+                                    <input type="hidden" value="30" name="boletos[un_dia][precio]">
+                                </div>
+                            </div>
+
+
+
+                      </li>
+                      <li>
+                            <div class="tabla-precio">
+                                <h3>Todos los días</h3>
+                                <p class="numero">$50</p>
+                                <ul>
+                                  <li>Bocadillos Gratis</li>
+                                  <li>Todas las conferencias</li>
+                                  <li>Todos los talleres</li>
+                                </ul>
+                                <div class="orden">
+                                    <label for="pase_completo">Boletos deseados:</label>
+                                    <input type="number" min="0" id="pase_completo" size="3" name="boletos[completo][cantidad]" placeholder="0">
+                                    <input type="hidden" value="50" name="boletos[completo][precio]">
+                                    
+                                </div>
+                            </div>
+                      </li> 
+                      
+                      <li>
+                            <div class="tabla-precio">
+                                <h3>Pase por 2 días (viernes y sábado)</h3>
+                                <p class="numero">$45</p>
+                                <ul>
+                                  <li>Bocadillos Gratis</li>
+                                  <li>Todas las conferencias</li>
+                                  <li>Todos los talleres</li>
+                                </ul>
+                                <div class="orden">
+                                    <label for="pase_dosdias">Boletos deseados:</label>
+                                    <input type="number" min="0" id="pase_dosdias" size="3" name="boletos[2dias][cantidad]" placeholder="0">
+                                    <input type="hidden" value="45" name="boletos[2dias][precio]">
+                                </div>
+                            </div>
+                      </li> 
+                  </ul>
+                </div>
+                <div id="resumen" class="resumen">
+                    <h3>Pago y Extras</h3>
+                    <div class="caja clearfix">
+                          <div class="extras">
+                                <div class="orden">
+                                    <label for="camisa_evento">Camisa del evento $10 <small>(promocion 7% dto.)</small></label>
+                                    <input type="number" min="0" id="camisa_evento" name="pedido_extra[camisas][cantidad]" size="3" placeholder="0">
+                                    <input type="hidden" value="10" name="pedido_extra[camisas][precio]">
+                                </div>
+                                <div class="orden">
+                                    <label for="etiquetas">Paquete de 10 etiquetas $2 <small>(HTML5, CSS3, JavaScript, Chrome)</small></label>
+                                    <input type="number" min="0" id="etiquetas" name="pedido_extra[etiquetas][cantidad]" size="3" placeholder="0">
+                                    <input type="hidden" value="2" name="pedido_extra[etiquetas][precio]">
+                                </div> <!--.orden-->
+                                <div class="orden">
+                                    <label for="regalo">Seleccione un regalo</label> <br>
+                                    <select id="regalo" name="regalo" required>
+                                        <option value="">- Seleccione un regalo --</option>
+                                        <option value="2">Etiquetas</option>
+                                        <option value="1">Pulsera</option>
+                                        <option value="3">Plumas</option>
+                                    </select>
+                                </div><!--.orden-->
+                                
+                                <input type="button" id="calcular" class="button" value="Calcular">
+                          </div> <!--.extras-->
+                          
+                          <div class="total">
+                              <p>Resumen:</p>
+                              <div id="lista-productos">
+                                
+                              </div>
+                              <p>Total:</p>
+                              <div id="suma-total">
+                                
+                              </div>
+                              <input type="hidden" name="total_pedido" id="total_pedido">
+                              <input type="hidden" name="total_descuento" id="total_descuento" value="total_descuento">
+                              <input id="btnRegistro" type="submit" name="submit" class="button" value="Pagar">
+                          </div> 
+                    </div>
+                 </div> 
+            
+        </form>
+    </section>
+    <script src="js/cotizador.js"></script>
+
+
+</body>
+</html>
